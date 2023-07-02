@@ -8,12 +8,14 @@ import com.goldenratio.chuglikaro.Services.SocketHandler;
 
 @Configuration
 @EnableWebSocket
-public class WebSocketConfiguration implements WebSocketConfigurer {
+public class WebSocketConfiguration implements WebSocketConfigurer  {
 
 	@Override
 	public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
 		registry.addHandler(new SocketHandler(), "/videochat").setAllowedOrigins("*");
 		
 	}
+	
+	
 
 }
